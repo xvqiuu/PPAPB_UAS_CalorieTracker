@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="blue">#2200CC</color>
+    <color name="cream">#EEF4ED</color>
+    <color name="goldrey">#8DA9C4</color>
+    <color name="oldblue">#0B2545</color>
+    <color name="youngblue">#13315C</color>
+    <color name="oceanblue">#134074</color>
+</resources>

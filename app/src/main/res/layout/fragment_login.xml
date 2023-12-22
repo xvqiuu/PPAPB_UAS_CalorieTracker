@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment"
+    android:orientation="vertical"
+    android:padding="25dp"
+    >
+
+    <TextView
+        android:id="@+id/txt_view_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Login"
+        style="@style/Title"
+        />
+
+    <EditText
+        android:id="@+id/edit_txt_email_login"
+        android:hint="Email"
+        style="@style/Input"
+        />
+
+
+    <EditText
+        android:id="@+id/edit_txt_password_login"
+        android:hint="Password"
+        style="@style/Input"
+        android:inputType="textPassword"
+        />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox_login"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:checked="false"
+            android:layout_marginStart="6dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_checking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:textSize="12sp"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:id="@+id/txt_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Forgot Password?"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:layout_marginStart="125dp"
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        style="@style/button"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_already"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Member? "
+            android:fontFamily="@font/poppinsmedium"
+            />
+
+        <TextView
+            android:id="@+id/txt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Register"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/poppinsmedium"
+            />
+    </LinearLayout>
+
+</LinearLayout>

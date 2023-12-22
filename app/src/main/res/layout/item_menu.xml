@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/txt_nama_makanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:text="Nama"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/oldblue"
+            />
+
+        <TextView
+            android:id="@+id/txt_jumlah_kalori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nama_makanan"
+            android:layout_marginTop="15dp"
+            android:layout_alignLeft="@id/txt_nama_makanan"
+            android:text="Jumlah Kalori"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/oldblue"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@+id/txt_name"
+            android:layout_marginLeft="200dp"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_edit_24"
+                />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:src="@drawable/baseline_delete_24" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
