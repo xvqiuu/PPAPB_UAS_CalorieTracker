@@ -77,7 +77,7 @@ class RegisterFragment : Fragment() {
                         }
                 }
             }
-            // Set click listener for the "Register" text
+            // Set click listener for the "Login" text
             txtLogin.setOnClickListener {
                 val activity = requireActivity() as MainActivity
                 activity.switchToLoginTab()

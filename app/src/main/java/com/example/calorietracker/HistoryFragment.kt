@@ -46,7 +46,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun getAllHistorys() {
-        //memperbarui tampilan recycler view dengan HistoryAdapter
+        //memperbarui tampilan recycler view dengan History
         mHistoryDao.allHistorys.observe(this) {
             binding.rvHistory.apply {
                 adapter = HistoryAdapter(it, { history ->
@@ -57,8 +57,6 @@ class HistoryFragment : Fragment() {
                     intent.putExtra("takaran",history.takaran)
                     intent.putExtra("jumlah",history.jumlah)
                     startActivity(intent)
-                }, {
-
                 })
             }
 

@@ -2,12 +2,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.AdapterListUpdateCallback
 import androidx.recyclerview.widget.RecyclerView
 import com.example.calorietracker.History
+import com.example.calorietracker.Menu
 import com.example.calorietracker.databinding.ItemHistoryBinding
 
-
-class HistoryAdapter (private val listHistorys: List<History>) :
+typealias OnClickUpdate = (History) -> Unit
+class HistoryAdapter (private val listHistorys: List<History>,
+                      private val onClickUpdate : OnClickUpdate) :
     RecyclerView.Adapter<HistoryAdapter.ItemHistoryViewHolder>(){
 
     inner class ItemHistoryViewHolder(private val binding: ItemHistoryBinding) :
