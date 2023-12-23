@@ -30,7 +30,7 @@ class EditadminActivity : AppCompatActivity() {
 
                 )
                 updateMenu(updateMenu)
-                //diperbarui dengan nilai baru dari objek student
+                //diperbarui dengan nilai baru dari objek menu
                 updateId = ""
                 finish()
             }

@@ -55,7 +55,7 @@ class AdminActivity : AppCompatActivity() {
     private fun getAllMenus() {
         menuCollectionRef.addSnapshotListener { snapshots, error ->
             if (error != null) {
-                Log.d("MainActivity", "Error listening for menu changes",
+                Log.d("AdminActivity", "Error listening for menu changes",
                     error)
                 return@addSnapshotListener
             }

@@ -26,7 +26,7 @@ class AddadminActivity : AppCompatActivity() {
                 val jumlah = editJumlahKalori.text.toString()
 
 
-                //membuat objek baru dr kelas student yang berisi nilai- nilai tersebut
+                //membuat objek baru dr kelas menu yang berisi nilai- nilai tersebut
                 val newMenu = Menu(
                     nama = nama, jumlah = jumlah
                 )

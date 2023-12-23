@@ -235,7 +235,7 @@
         </HorizontalScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/txt_view_sisa_kalori"
+            android:id="@+id/container_txt_view_sisa_kalori"
             android:layout_width="260dp"
             android:layout_height="260dp"
             android:textAlignment="center"
@@ -246,6 +246,7 @@
             app:layout_constraintTop_toBottomOf="@+id/sc_menu">
 
             <TextView
+                android:id="@+id/txt_view_sisa_kalori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppinsmedium"

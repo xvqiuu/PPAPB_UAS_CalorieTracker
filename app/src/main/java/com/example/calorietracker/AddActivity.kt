@@ -73,7 +73,7 @@ class AddActivity : AppCompatActivity() {
             )
             val notificationManager =
                 getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-            notificationManager.createNotificationChannel(channel)
+                notificationManager.createNotificationChannel(channel)
         }
     }
     private fun showNotification(message: String) {

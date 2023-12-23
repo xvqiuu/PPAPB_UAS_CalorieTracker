@@ -23,9 +23,6 @@
             android:name=".AddadminActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity2"
-            android:exported="false" />
-        <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity

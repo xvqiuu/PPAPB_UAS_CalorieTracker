@@ -13,17 +13,22 @@ import com.google.firebase.firestore.FirebaseFirestore
 class MenuActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMenuBinding
-
+    private var totalCalories = 0// Hitung total kalori
+    private val dashboardFragment = DashboardFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // Ambil nilai totalCalories dari intent jika ada
+        totalCalories = intent.getIntExtra("TOTAL_CALORIES", 0)
 
         with(binding){
             btnAddcustom.setOnClickListener {
                 val intent = Intent(this@MenuActivity, AddActivity::class.java)
+
+                intent.putExtra("TOTAL_CALORIES", totalCalories)
                 startActivity(intent)
             }
             btnBack.setOnClickListener {
@@ -104,7 +109,6 @@ class MenuActivity : AppCompatActivity() {
                         searchResults.add(it)
                     }
                 }
-
                 // Memperbarui tampilan RecyclerView di thread utama
                 runOnUiThread {
                     updateRecyclerView(searchResults)
@@ -115,26 +119,7 @@ class MenuActivity : AppCompatActivity() {
                 Log.e("FirestoreSearch", "Error searching menu", e)
                 // Mungkin ingin menangani kegagalan dengan menampilkan pesan kesalahan kepada pengguna
             }
-    } 09 ''[]]]]]]]]]]]]]]]]]]]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    n-=p0
-
+    }
 
     private fun updateRecyclerView(searchResults: List<Menu>) {
         // memperbarui tampilan recycler view dengan hasil pencarian

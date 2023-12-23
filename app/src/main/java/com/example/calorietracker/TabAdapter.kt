@@ -15,5 +15,4 @@ class TabAdapter(fm:FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter
     override fun createFragment(position: Int): Fragment {
         return page[position]
     }
-
 }

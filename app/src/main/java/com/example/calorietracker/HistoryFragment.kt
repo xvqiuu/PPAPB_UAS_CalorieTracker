@@ -20,6 +20,7 @@ class HistoryFragment : Fragment() {
     //digunakan untuk menjalankan tugas secara tidak langsung pada thread terpisah
     private lateinit var executorService: ExecutorService
 
+    private var totalCalories: Int = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,7 +46,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun getAllHistorys() {
-        //memperbarui tampilan recycler view dengan StudentAdapter
+        //memperbarui tampilan recycler view dengan HistoryAdapter
         mHistoryDao.allHistorys.observe(this) {
             binding.rvHistory.apply {
                 adapter = HistoryAdapter(it, { history ->

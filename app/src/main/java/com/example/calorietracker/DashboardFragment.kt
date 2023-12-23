@@ -8,14 +8,24 @@ import android.view.ViewGroup
 import com.example.calorietracker.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
-   private lateinit var binding : FragmentDashboardBinding
+    private lateinit var binding : FragmentDashboardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        binding = FragmentDashboardBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Mengambil data dari arguments
+        val totalCalories = arguments?.getInt("TOTAL_CALORIES") ?: 0
+
+        // Melakukan sesuatu dengan data yang diterima, contohnya:
+        binding.txtViewSisaKalori.text = "$totalCalories"
+
     }
 
 }

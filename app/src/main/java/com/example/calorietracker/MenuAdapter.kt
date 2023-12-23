@@ -21,7 +21,6 @@ class MenuAdapter(private val listMenus: List<Menu>,
 
                 itemView.setOnClickListener {
                     onClickAdd(data)
-
                 }
             }
         }

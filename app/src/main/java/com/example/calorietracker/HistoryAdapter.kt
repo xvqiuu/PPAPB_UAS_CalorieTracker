@@ -6,12 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.calorietracker.History
 import com.example.calorietracker.databinding.ItemHistoryBinding
 
-typealias onClickUpdate = (History) -> Unit
-typealias onClickDelete = (History) -> Unit
 
-class HistoryAdapter (private val listHistorys: List<History>,
-                   private val onClickUpdate : onClickUpdate,
-                   private val onClickDelete: onClickDelete) :
+class HistoryAdapter (private val listHistorys: List<History>) :
     RecyclerView.Adapter<HistoryAdapter.ItemHistoryViewHolder>(){
 
     inner class ItemHistoryViewHolder(private val binding: ItemHistoryBinding) :
@@ -35,14 +31,6 @@ class HistoryAdapter (private val listHistorys: List<History>,
                         Toast.LENGTH_SHORT).show()
 
                 }
-
-//                edit.setOnClickListener {
-//                    onClickUpdate(data)
-//                }
-//
-//                delete.setOnClickListener {
-//                    onClickDelete(data)
-//                }
             }
         }
     }
